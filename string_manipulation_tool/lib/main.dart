@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
-TextEditingController stringController = new TextEditingController();
+//TextEditingController stringController = new TextEditingController();
+
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -44,17 +45,16 @@ class _MyCustomFormState extends State<MyCustomForm> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: 
-        
-        TextField(
-          controller: myController,
-          obscureText: false,
-          decoration: InputDecoration(
-           border: OutlineInputBorder(),
-           labelText: 'Enter Text',
-           ),
-        ),
-        
+        child: Stack(alignment: Alignment.center, children: <Widget>[
+          TextField(
+            controller: myController,
+            obscureText: false,
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              labelText: 'Enter Text',
+            ),
+          ),
+        ]),
       ),
       floatingActionButton: FloatingActionButton(
         // When the user presses the button, show an alert dialog containing
@@ -74,7 +74,6 @@ class _MyCustomFormState extends State<MyCustomForm> {
         tooltip: 'Show me the value!',
         child: const Icon(Icons.text_fields),
       ),
-      
     );
   }
 }
