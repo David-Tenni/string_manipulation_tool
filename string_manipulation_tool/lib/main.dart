@@ -54,6 +54,9 @@ class _MyCustomFormState extends State<MyCustomForm> {
               labelText: 'Enter Text',
             ),
           ),
+          FinishedText(
+
+          )
         ]),
       ),
       floatingActionButton: FloatingActionButton(
@@ -75,5 +78,18 @@ class _MyCustomFormState extends State<MyCustomForm> {
         child: const Icon(Icons.text_fields),
       ),
     );
+  }
+}
+
+class FinishedText extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Column(children: [
+        TextField(
+        decoration: InputDecoration(
+        border: OutlineInputBorder(),
+        labelText: 'output text',
+      ))
+    ]);
   }
 }
